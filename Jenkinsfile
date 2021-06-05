@@ -3,11 +3,9 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase'){
+        stage('Cloning Git''){
             steps{
-                cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [[credentialsId: 'github-ssh-key', url: 'git@github.com:shitalkumar58627/junit.git']]]
+               git 'https://github.com/shitalkumar58627/jenkinspipelinejnit.git'
             }
         }
 
