@@ -6,6 +6,7 @@ pipeline {
         stage('Cloning Git'){
             steps{
                echo " added suscesfully"
+               git 'https://github.com/shitalkumar58627/jenkinspipelinejnit.git'
             }
         }
 
